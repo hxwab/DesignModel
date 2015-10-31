@@ -4,14 +4,13 @@ public class AccessUser implements IUser{
 
 	@Override
 	public void insert(User user) {
-		// TODO Auto-generated method stub
-		System.out.println("ÔÚAccessÖĞ²åÈë²åÈëÒ»Ìõ¼ÇÂ¼");
+	
+		System.out.println("åœ¨Accessä¸­æ’å…¥æ’å…¥ä¸€æ¡è®°å½•");
 	}
 
 	@Override
-	public User getUser(int id) {
-		// TODO Auto-generated method stub
-		System.out.println("ÔÚAccess ÖĞ¸ù¾İID²éÕÒUser¼ÇÂ¼");
+	public User getUser(int id) {	
+		System.out.println("åœ¨Access ä¸­æ ¹æ®IDæŸ¥æ‰¾Userè®°å½•");
 		return null;
 	}
 
