@@ -4,16 +4,14 @@ public class AccesDepartment  implements IDepartment{
 
 	@Override
 	public void insert(Department d) {
-		// TODO Auto-generated method stub
 
-		System.out.println("ÔÚAccessÖĞµÄdepartment±íÖĞ²åÈëÒ»Ìõ¼ÇÂ¼");
+		System.out.println("åœ¨Accessä¸­çš„departmentè¡¨ä¸­æ’å…¥ä¸€æ¡è®°å½•");
 		
 	}
 
 	@Override
 	public IDepartment getDepartment(int id) {
-		// TODO Auto-generated method stub
-		System.out.println("ÔÚAccessÖĞµÄdepartmentÖĞ²éÕÒ¼ÇÂ¼");
+		System.out.println("åœ¨Accessä¸­çš„departmentä¸­æŸ¥æ‰¾è®°å½•");
 		return null;
 	}
 
