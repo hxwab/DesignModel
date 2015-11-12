@@ -1,5 +1,6 @@
 package com.config.read;
 
+
 public class HelloBean {
 
 	private String hello;
