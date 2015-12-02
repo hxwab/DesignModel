@@ -42,7 +42,7 @@ public class Singleton {
 class Singleton2{
 	
 	private static Singleton2 instance =null;
-	
+	//静态块在该类加载的时候执行，且存储在单独开辟的空间
 	static{
 		instance = new Singleton2();
 	}
