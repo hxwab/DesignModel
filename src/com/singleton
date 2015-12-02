@@ -12,7 +12,6 @@ public class Singleton {
 	
 	//每次调用都上锁
 	public static Singleton getInstance(){
-		
 		lock.lock();
 		try{
 			if(instance==null){
