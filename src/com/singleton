@@ -1,0 +1,39 @@
+package com.singleton;
+
+public class Singleton {
+	
+	private static Singleton instance=null;
+	private static Object ojb = new Object();
+	
+	
+	private Singleton() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	//每次调用都上锁
+	public static Singleton getInstance(){
+		synchronized (ojb) {
+			if(instance==null){
+				instance = new Singleton();
+			}
+		}
+		return instance;
+	}
+	
+	
+	//上锁耗时，先判断们对于instance 为null的上锁
+	public static Singleton getInstance1(){
+		
+		if(instance==null){
+			
+			synchronized (ojb) {
+				if(instance==null){
+					instance = new Singleton();
+				}
+			}
+		}
+		return instance;
+	}
+	
+
+}
