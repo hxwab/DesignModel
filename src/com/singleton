@@ -36,6 +36,21 @@ public class Singleton {
 	
 	
 	//上锁耗时，先判断们对于instance 为null的上锁
+	/这里可以保证只实例化一次 
+            //即在第一次调用时实例化 
+            //以后调用便不会再实例化 
+            //为何双重判断？
+            /*
+            这里就涉及一个性能问题了，因为对于单例模式的话，new Singleton（）只需要执行一次就 OK 了，
+
+而如果没有第一重 singleton == null 的话，每一次有线程进入 GetInstance（）时，均会执行锁定操作来实现线程同步，
+
+这是非常耗费性能的，而如果我加上第一重 singleton == null 的话，
+
+那么就只有在第一次，也就是 singleton ==null 成立时的情况下执行一次锁定以实现线程同步，
+
+而以后的话，便只要直接返回 Singleton 实例就 OK 了而根本无需再进入 lock 语句块了，这样就可以解决由线程同步带来的性能问题了。
+            */
 	public static Singleton getInstance1(){
 		
 		if(instance==null){
