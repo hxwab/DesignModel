@@ -1,5 +1,7 @@
 package com.singleton;
 
+import java.util.concurrent.locks.ReentrantLock;
+
 public class Singleton {
 	private static ReentrantLock lock =  new ReentrantLock();
 	private static Singleton instance=null;
@@ -24,7 +26,7 @@ public class Singleton {
 	}
 	
 	//每次调用都上锁
-	public static Singleton getInstance(){
+	public static Singleton getInstance0(){
 		synchronized (ojb) {
 			if(instance==null){
 				instance = new Singleton();
@@ -35,7 +37,7 @@ public class Singleton {
 	
 	
 	//上锁耗时，先判断们对于instance 为null的上锁
-	/这里可以保证只实例化一次 
+	//这里可以保证只实例化一次 
             //即在第一次调用时实例化 
             //以后调用便不会再实例化 
             //为何双重判断？
