@@ -11,9 +11,11 @@ public class ConcreteDecortor_AddAmount extends Decorator {
 	}
 	
 	public void addAmount(){
-		System.out.println("¸øĞÂÎÅÌí¼ÓÈËÆø");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 	}
-
+/**
+ * è£…é¥°æ¨¡å¼ï¼šåœ¨ä¸æ”¹å˜æ¥å£çš„å‰æä¸‹ï¼ŒåŠ¨æ€æ‰©å±•å¯¹è±¡çš„åŠŸèƒ½
+ */
 	@Override
 	protected List<News> getListOfNews() {
 		super.getListOfNews();
