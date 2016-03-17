@@ -2,7 +2,7 @@ package com.proxy;
 /**
  * 代理模式：在不改变接口的前提下，控制对象的访问
  * @author csdc
- *
+ *在正真调用业务之前，做一些额外的业务操作
  */
 public class Proxy implements Subject {
 
@@ -17,6 +17,16 @@ public class Proxy implements Subject {
 		this.pression =pression;
 	}
 	
+	public Proxy(Subject subject){
+		this.subject=subject;
+	}
+	
+	public Proxy(Subject subject,int pression){
+		this(subject);
+		this.pression=pression;
+	}
+	
+	
 	/*
 	 * (non-Javadoc)
 	 * @see com.proxy.Subject#doAction()
@@ -27,6 +37,7 @@ public class Proxy implements Subject {
 	@Override
 	public void doAction() {
 		
+		//在调用业务之前，做一些额外的业务处理
 		if(pression ==ALLOW){
 			subject.doAction();
 		}else{
