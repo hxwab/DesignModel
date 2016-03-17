@@ -3,6 +3,8 @@ package com.proxy;
  * 代理模式：在不改变接口的前提下，控制对象的访问
  * @author csdc
  *在正真调用业务之前，做一些额外的业务操作
+ *
+ *屏蔽了业务的具体实现细节
  */
 public class Proxy implements Subject {
 
