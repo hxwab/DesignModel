@@ -16,6 +16,11 @@ public class FlyWeightFactory {
 	private static FlyWeightFactory factory ;
 	private static Object lock = new Object();
 	
+	
+	private FlyWeightFactory(){
+		
+	}
+	
 	public static FlyWeightFactory getInstance(){ //单例模式
 		if(factory==null){
 			synchronized (lock) {
