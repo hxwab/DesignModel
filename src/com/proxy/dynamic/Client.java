@@ -13,7 +13,7 @@ public class Client {
 	
 	public static void main(String[] args) throws SecurityException, NoSuchMethodException, IllegalArgumentException, IllegalAccessException, InvocationTargetException {
 		
-		ElectricCar car = new ElectricCar();
+		/*ElectricCar car = new ElectricCar();
 		
 		ClassLoader loader = car.getClass().getClassLoader();
 		
@@ -21,7 +21,10 @@ public class Client {
 		
 		InvokHanderImp handerImp = new InvokHanderImp(car);
 		
-		Object  o = Proxy.newProxyInstance(loader, inter, handerImp);
+		Object  o = Proxy.newProxyInstance(loader, inter, handerImp);*/
+		
+		InvokHanderImp handerImp = new InvokHanderImp(new ElectricCar() );
+		Object o  = handerImp.creatProxy();
 		
 		Vehicle vehicle = (Vehicle) o;
 		vehicle.drive();
@@ -30,8 +33,8 @@ public class Client {
 		rechargeable.recharge();
 		
 		
-		Method m = car.getClass().getDeclaredMethod("drive");
-		m.invoke(car);
+		Method m =  o.getClass().getDeclaredMethod("drive");
+		m.invoke(o);
 		
 		
 		}
