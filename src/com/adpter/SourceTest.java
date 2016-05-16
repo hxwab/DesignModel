@@ -17,6 +17,7 @@ public class SourceTest {
 
 		Sourceable source = new SourceSub1();
 		source.method1();
+		source.method2();
 		
 	}
 
