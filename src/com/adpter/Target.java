@@ -5,9 +5,17 @@ package com.adpter;
  * @author csdc
  *
  */
-public interface Sourceable {
+public interface Target {
 	
+	/**
+     * 这是源类Adaptee也有的方法
+     */
 	public void method1();
+	
+	
+	  /**
+     * 这是源类Adapteee没有的方法
+     */
 	public void method2();
 
 }
