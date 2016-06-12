@@ -1,6 +1,6 @@
 package com.adpter;
 
-public abstract class Wrapper2 implements Sourceable {
+public abstract class Wrapper2 implements Target {
 
 	@Override
 	public void method1() {
