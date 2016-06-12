@@ -15,7 +15,7 @@ public class SourceTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Sourceable source = new SourceSub1();
+		Target source = new SourceSub1();
 		source.method1();
 		source.method2();
 		
