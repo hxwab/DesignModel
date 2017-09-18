@@ -21,7 +21,6 @@ public class Calculator {
 		this.y = y;
 	}
 
-	 Observable
 	public Calculator(int x, int y, ICalcStrategy strategy) {
 		this(x,y);
 		this.strategy = strategy;

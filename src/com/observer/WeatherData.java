@@ -1,6 +1,7 @@
 package com.observer;
 
 import java.util.HashSet;
+import java.util.Observer;
 import java.util.Set;
 
 public class WeatherData implements Subject {
@@ -28,7 +29,7 @@ public class WeatherData implements Subject {
 	public void notifyObservers() {
 	
 		for(Observer o :observers){
-			o.update(this);
+			//o.update(this,null);
 		}
 	}
 
